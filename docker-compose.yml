@@ -1,0 +1,40 @@
+version: '2.4'
+
+services:
+  base:
+    build:
+      context: .
+    volumes:
+      - .:/app
+    tty: true
+    environment:
+      - RACK_ENV=development
+
+  web:
+    extends:
+      file: docker-compose.yml
+      service: base
+    ports:
+      - "8080:80"
+    environment:
+      - RACK_ENV=production
+      - FINANCE_DATA_HOST_URL=https://au.finance.dummy.com
+
+  dev:
+    extends:
+      file: docker-compose.yml
+      service: base
+    ports:
+      - "8080:80"
+    environment:
+      - RACK_ENV=development
+      - FINANCE_DATA_HOST_URL=https://au.finance.dummy.com
+    command: sh
+
+  test:
+    extends:
+      file: docker-compose.yml
+      service: base
+    environment:
+      - RACK_ENV=test
+    command: bundle exec rake
