@@ -1,4 +1,4 @@
-From ruby:2.6.3-alpine
+From ruby:2.5.5-alpine
 
 RUN apk update && apk --no-cache add gcc make g++
 
