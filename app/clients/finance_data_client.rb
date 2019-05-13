@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require_relative '../../system/boot'
 require 'em-synchrony'
 require 'em-synchrony/em-http'
 require 'exceptions/finance_data_client_error'
