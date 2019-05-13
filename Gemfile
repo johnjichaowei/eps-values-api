@@ -2,6 +2,7 @@
 
 source 'https://rubygems.org'
 
+gem 'dry-validation'
 gem 'em-http-request'
 gem 'em-synchrony'
 gem 'envied'
