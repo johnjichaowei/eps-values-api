@@ -19,7 +19,7 @@ services:
       - "8080:80"
     environment:
       - RACK_ENV=production
-      - FINANCE_DATA_HOST_URL=https://au.finance.dummy.com
+      - FINANCE_DATA_HOST_URL=https://au.finance.yahoo.com
 
   dev:
     extends:

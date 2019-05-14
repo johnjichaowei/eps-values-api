@@ -7,7 +7,6 @@ require 'exceptions/finance_data_client_error'
 class FinanceDataClient
   class << self
     def get(company_symbol)
-      LOGGER.info("Getting finance data  for #{company_symbol}")
       http = EM::HttpRequest.new("#{ENVied.FINANCE_DATA_HOST_URL}/quote/#{company_symbol}.AX").get
 
       conn_err = "Connection error when retrieving finance data for #{company_symbol}, error #{http.error}"
