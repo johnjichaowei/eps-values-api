@@ -1,3 +1,4 @@
 enable_defaults! { ENV['RACK_ENV'] != 'production' }
 
 variable :FINANCE_DATA_HOST_URL, :string, default: 'https://dummy-finance-site.com'
+variable :MAX_CONCURRENCY_COUNT, :integer, default: 10
