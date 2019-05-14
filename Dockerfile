@@ -1,6 +1,4 @@
-From ruby:2.5.5-alpine
-
-RUN apk update && apk --no-cache add gcc make g++
+From ruby:2.5.5
 
 ENV APP_HOME /app
 WORKDIR $APP_HOME
