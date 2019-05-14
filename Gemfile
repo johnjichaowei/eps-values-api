@@ -2,6 +2,7 @@
 
 source 'https://rubygems.org'
 
+gem 'async-rack', '0.5.2', git: 'https://github.com/roiavidan/async-rack', branch: 'fix_rack_2'
 gem 'dry-validation'
 gem 'em-http-request'
 gem 'em-synchrony'

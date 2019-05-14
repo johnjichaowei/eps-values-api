@@ -30,7 +30,7 @@ services:
     environment:
       - RACK_ENV=development
       - FINANCE_DATA_HOST_URL=https://au.finance.dummy.com
-    command: sh
+    command: bash
 
   test:
     extends:
